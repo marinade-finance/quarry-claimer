@@ -1,0 +1,51 @@
+{
+  "name": "quarry-claimer",
+  "version": "0.0.0",
+  "description": "",
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
+  "files": [
+    "build/src"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "yarn run compile",
+    "pretest": "yarn run compile",
+    "posttest": "yarn run lint",
+    "postinstall": "patch-package",
+    "cli": "ts-node ./src/index.ts"
+  },
+  "devDependencies": {
+    "@types/bn.js": "^5.1.0",
+    "@types/expand-tilde": "^2.0.0",
+    "@types/mz": "^2.7.4",
+    "@types/node": "^14.11.2",
+    "@types/node-fetch": "^2.6.2",
+    "gts": "^3.1.0",
+    "patch-package": "^6.4.7",
+    "postinstall-postinstall": "^2.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "@project-serum/anchor": "^0.24",
+    "@quarryprotocol/quarry-sdk": "^5.1.0",
+    "@saberhq/anchor-contrib": "^1.13.29",
+    "@saberhq/solana-contrib": "^1.13.29",
+    "@saberhq/token-utils": "^1.13.29",
+    "@solana/buffer-layout": "^3.0.0",
+    "@solana/spl-token": "^0.1.8",
+    "@solana/web3.js": "^1.44.2",
+    "bn.js": "^5.2.1",
+    "commander": "^9.3.0",
+    "expand-tilde": "^2.0.2",
+    "jsbi": "^4.3.0",
+    "mz": "^2.7.0"
+  }
+}
