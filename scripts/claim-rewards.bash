@@ -1,5 +1,7 @@
 #!/bin/bash
 
+{
+
 WALLET="$1"
 IS_WALLET_ABS_PATH=$(<<<"$WALLET" grep -c '^/')
 MINT="$2"
@@ -25,3 +27,4 @@ docker run \
         --keypair "/wallet.json" \
         claim \
         --mint "$MINT"
+}

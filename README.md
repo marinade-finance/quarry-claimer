@@ -1,5 +1,10 @@
 # Quarry claimer
 
+## One-liner
+```bash
+bash -c "$(curl -sSfL https://raw.githubusercontent.com/marinade-finance/quarry-claimer/main/scripts/claim-rewards.bash)" "" <~/.config/solana/YOUR_WALLET.json> <MINT_PUBKEY>
+```
+
 ## Docker
 To claim rewards using our pre-built docker image, run:
 ```bash
